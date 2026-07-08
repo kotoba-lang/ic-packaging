@@ -10,7 +10,7 @@
 
 (deftest namespace-loads
   (testing "the restored CLJC namespace loads"
-    (is (some? (the-ns 'ic-packaging)))))
+    (is (some? (find-ns 'ic-packaging)))))
 
 ;; mirrors `bga_pin_count_correct` (package.rs)
 (deftest bga-pin-count-correct
