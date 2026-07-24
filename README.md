@@ -27,6 +27,16 @@ original Rust unit tests mirrored 1:1 in `test/ic_packaging_test.cljc`
 (+1 smoke test) — 6 tests / 10 assertions, 0 failures. Pure data + pure
 functions throughout; no IO/GPU.
 
+## Kotoba bounded profile
+
+`src/ic_packaging/bounded_thermal.kotoba` is a capability-free port of
+`ic-packaging.thermal`'s junction/case temperature formula (the simple
+thermal-resistance network, including the forced-airflow `1/sqrt(1+v)`
+factor). `ic-packaging.package`/`ic-packaging.bonding` stay CLJC (not
+reviewed this pass). See
+[migration/bounded-thermal-v1.edn](migration/bounded-thermal-v1.edn) for
+the full record.
+
 ## Develop
 
 ```bash
